@@ -1,0 +1,169 @@
+/* Lab 3B: Book Information Dual-Pane Frames Stylesheet */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7ede2;
+    color: #2b2d42;
+}
+
+/* Master Frames Container */
+.frames-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    border: 2px solid #8d99ae;
+    overflow: hidden;
+}
+
+.left-frame-wrapper {
+    width: 320px;
+    min-width: 260px;
+    height: 100%;
+    border-right: 3px solid #6c757d;
+    background-color: #f5ebe0;
+}
+
+.right-frame-wrapper {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Left Pane Styling (book_list.html) */
+.list-panel {
+    padding: 24px 20px;
+    background-color: #f5ebe0;
+    min-height: 100%;
+}
+
+.panel-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #d5bdaf;
+}
+
+.book-nav-list {
+    list-style-type: disc;
+    padding-left: 24px;
+}
+
+.book-nav-list li {
+    margin-bottom: 14px;
+}
+
+.book-nav-list a {
+    color: #2563eb;
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.book-nav-list a:hover {
+    color: #db2777;
+    transform: translateX(4px);
+    font-weight: 700;
+}
+
+/* Right Pane Styling (book detail & default views) */
+.info-panel {
+    padding: 30px 40px;
+    background-color: #ffffff;
+    min-height: 100%;
+    animation: fadeInPane 0.4s ease-out;
+}
+
+@keyframes fadeInPane {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-header-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #e5e7eb;
+}
+
+.placeholder-text {
+    font-size: 15px;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Book Details Card in Right Pane */
+.book-card-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.book-cover-art {
+    width: 170px;
+    height: 245px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.book-cover-art:hover {
+    transform: scale(1.03) rotate(-1deg);
+}
+
+.book-meta {
+    flex: 1;
+}
+
+.author-tag {
+    font-size: 14px;
+    color: #e11d48;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.book-synopsis {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px dashed #e2e8f0;
+    line-height: 1.7;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.spec-list {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.spec-list li {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.spec-list strong {
+    color: #111827;
+}

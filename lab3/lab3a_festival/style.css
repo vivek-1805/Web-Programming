@@ -1,0 +1,179 @@
+/* Lab 3A: Clean Cultural Festival Form Stylesheet with Animated Title */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f4f6;
+    color: #333333;
+    padding: 30px 15px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Animated Festival Title */
+.animated-festival-title {
+    text-align: center;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6, #ec4899);
+    background-size: 300% 300%;
+    color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+    
+    /* Animations */
+    animation: gradientSlide 5s ease infinite alternate, titlePulse 3s ease-in-out infinite;
+}
+
+@keyframes gradientSlide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes titlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.animated-festival-title h1 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.animated-festival-title p {
+    font-size: 13px;
+    margin-top: 5px;
+    opacity: 0.95;
+}
+
+/* Fieldsets and Legends for Pure Semantic HTML Form Structure */
+fieldset {
+    border: 1.5px solid #94a3b8;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin-bottom: 22px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 15px;
+    color: #1e3a8a;
+    padding: 0 8px;
+}
+
+/* Standard HTML Form Table Layout */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 8px 6px;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.label-cell {
+    width: 32%;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+/* HTML Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    max-width: 420px;
+    padding: 7px 10px;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    outline: 2px solid #bfdbfe;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.radio-inline, .checkbox-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.button-row {
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 1px solid #e2e8f0;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+input[type="submit"] {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #1d4ed8;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+input[type="reset"] {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: 1px solid #9ca3af;
+}
+
+input[type="reset"]:hover {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border-color: #ef4444;
+}

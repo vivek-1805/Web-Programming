@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3A - Cultural Festival Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <!-- Animated Festival Title -->
+    <div class="animated-festival-title">
+        <h1>TARANG '26 CULTURAL FESTIVAL</h1>
+        <p>Inter-Collegiate Event Registration Form</p>
+    </div>
+
+    <!-- Registration Form using standard HTML form elements -->
+    <form action="#" method="post" onsubmit="alert('Registration submitted successfully!'); return false;">
+        
+        <!-- 1. Text Boxes & Dropdown: Participant Information -->
+        <fieldset>
+            <legend>Participant &amp; Institute Information</legend>
+            <table class="form-table">
+                <!-- Text Box 1: Full Name -->
+                <tr>
+                    <td class="label-cell"><label for="fullName">Full Name:</label></td>
+                    <td><input type="text" id="fullName" name="fullName" placeholder="Enter full name" required></td>
+                </tr>
+
+                <!-- Text Box 2: Email -->
+                <tr>
+                    <td class="label-cell"><label for="email">Email Address:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="example@college.edu" required></td>
+                </tr>
+
+                <!-- Text Box 3: Contact Number -->
+                <tr>
+                    <td class="label-cell"><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required></td>
+                </tr>
+
+                <!-- Text Box 4: College Name -->
+                <tr>
+                    <td class="label-cell"><label for="college">College / Institute Name:</label></td>
+                    <td><input type="text" id="college" name="college" placeholder="Enter college name" required></td>
+                </tr>
+
+                <!-- Text Box 5: Roll Number / Student ID -->
+                <tr>
+                    <td class="label-cell"><label for="rollNo">Student ID / Roll No:</label></td>
+                    <td><input type="text" id="rollNo" name="rollNo" placeholder="e.g. 2024CS051" required></td>
+                </tr>
+
+                <!-- Drop-down list: Year of Study -->
+                <tr>
+                    <td class="label-cell"><label for="year">Year of Study:</label></td>
+                    <td>
+                        <select id="year" name="year" required>
+                            <option value="" disabled selected>-- Select Academic Year --</option>
+                            <option value="1st Year">1st Year (Freshman)</option>
+                            <option value="2nd Year">2nd Year (Sophomore)</option>
+                            <option value="3rd Year">3rd Year (Junior)</option>
+                            <option value="4th Year">4th Year (Senior)</option>
+                            <option value="Postgraduate">Postgraduate</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- 2. Option Buttons (Radio Buttons): Gender & Category -->
+        <fieldset>
+            <legend>Preferences &amp; Category</legend>
+            <table class="form-table">
+                <!-- Radio Buttons: Gender -->
+                <tr>
+                    <td class="label-cell">Gender:</td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" value="Male" required> Male
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" value="Female"> Female
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="gender" value="Other"> Other
+                        </label>
+                    </td>
+                </tr>
+
+                <!-- Radio Buttons: Participation Mode -->
+                <tr>
+                    <td class="label-cell">Participation Mode:</td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="participationMode" value="Solo" required> Solo
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="participationMode" value="Duet"> Duet
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="participationMode" value="Group"> Group / College Team
+                        </label>
+                    </td>
+                </tr>
+
+                <!-- Radio Buttons: Accommodation -->
+                <tr>
+                    <td class="label-cell">Campus Accommodation:</td>
+                    <td>
+                        <label class="radio-inline">
+                            <input type="radio" name="accommodation" value="Yes" required> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="accommodation" value="No"> No
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- 3. Check Boxes & Drop-down List: Events -->
+        <fieldset>
+            <legend>Event Selection</legend>
+            <table class="form-table">
+                <!-- Drop-down list: Event Department -->
+                <tr>
+                    <td class="label-cell"><label for="eventCategory">Main Category:</label></td>
+                    <td>
+                        <select id="eventCategory" name="eventCategory" required>
+                            <option value="" disabled selected>-- Select Main Category --</option>
+                            <option value="Music">Music &amp; Vocal</option>
+                            <option value="Dance">Dance &amp; Choreography</option>
+                            <option value="Dramatics">Dramatics &amp; Theatre</option>
+                            <option value="FineArts">Fine Arts &amp; Painting</option>
+                            <option value="Literary">Literary &amp; Debate</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Check Boxes: Select Events -->
+                <tr>
+                    <td class="label-cell">Select Events:</td>
+                    <td>
+                        <div class="checkbox-group">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="events" value="Battle of Bands"> Battle of the Bands (Rock/Acoustic)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="events" value="Classical Dance"> Solo / Group Classical &amp; Western Dance
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="events" value="Street Play"> Street Play (Nukkad Natak)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="events" value="Standup Comedy"> Stand-up Comedy &amp; Mimicry
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="events" value="Fashion Show"> Fashion Show (Vogue)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="events" value="Canvas Painting"> Live Canvas Painting &amp; Sketching
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- 4. Text Area: Additional Notes / Achievements -->
+        <fieldset>
+            <legend>Special Requirements &amp; Details</legend>
+            <table class="form-table">
+                <tr>
+                    <td class="label-cell"><label for="specialReq">Special Requirements / Previous Achievements:</label></td>
+                    <td>
+                        <textarea id="specialReq" name="specialReq" rows="4" placeholder="Mention any musical instruments brought, stage setup requirements, or previous awards won..."></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- 5. Submit and Reset Buttons -->
+        <div class="button-row">
+            <input type="submit" value="Submit Registration">
+            <input type="reset" value="Reset Form">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Programming Lab Assignments - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #172554 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hub-container {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hub-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .hub-badge {
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            color: #0f172a;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .hub-title {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .hub-subtitle {
+            color: #94a3b8;
+            font-size: 15px;
+        }
+
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .lab-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lab-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lab-card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+            box-shadow: 0 16px 30px rgba(56, 189, 248, 0.15);
+            background: rgba(30, 41, 59, 0.95);
+        }
+
+        .lab-card:hover::before {
+            opacity: 1;
+        }
+
+        .lab-tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .lab-name {
+            font-size: 19px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .lab-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #38bdf8;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body>
+
+<div class="hub-container">
+    <div class="hub-header">
+        <span class="hub-badge">Curriculum Practical Portfolio</span>
+        <h1 class="hub-title">Web Programming Lab Solutions</h1>
+        <p class="hub-subtitle">Complete HTML &amp; CSS practical implementations with interactive animations</p>
+    </div>
+
+    <div class="labs-grid">
+        <!-- Lab 1 Card -->
+        <a href="lab1/index.html" class="lab-card">
+            <div>
+                <div class="lab-tag">Lab Exercise 1 &bull; August 11</div>
+                <h2 class="lab-name">Book Information Portal</h2>
+                <p class="lab-desc">Jack Reacher book collection with linked multi-page detailed specifications, editions, and visual covers.</p>
+            </div>
+            <div class="card-footer">
+                <span>Launch Lab 1</span>
+                <span>&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Lab 2 Card -->
+        <a href="lab2/index.html" class="lab-card">
+            <div>
+                <div class="lab-tag" style="color: #34d399;">Lab Exercise 2 &bull; August 18</div>
+                <h2 class="lab-name">Products Available Catalog</h2>
+                <p class="lab-desc">HTML table tag implementation featuring brand specs, prices, animated rows, filter categories, and buy actions.</p>
+            </div>
+            <div class="card-footer" style="color: #34d399;">
+                <span>Launch Lab 2</span>
+                <span>&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Lab 3A Card -->
+        <a href="lab3/lab3a_festival/index.html" class="lab-card">
+            <div>
+                <div class="lab-tag" style="color: #f472b6;">Lab Exercise 3 (A) &bull; September 1</div>
+                <h2 class="lab-name">Cultural Fest Registration</h2>
+                <p class="lab-desc">Creative animated registration form with textboxes, radio buttons, checkboxes, dropdowns, textarea, submit &amp; reset.</p>
+            </div>
+            <div class="card-footer" style="color: #f472b6;">
+                <span>Launch Lab 3A</span>
+                <span>&#8594;</span>
+            </div>
+        </a>
+
+        <!-- Lab 3B Card -->
+        <a href="lab3/lab3b_frames/index.html" class="lab-card">
+            <div>
+                <div class="lab-tag" style="color: #fb923c;">Lab Exercise 3 (B) &bull; September 1</div>
+                <h2 class="lab-name">Book Information Frames</h2>
+                <p class="lab-desc">Two-part split frames layout (Colleen Hoover series): Left list dynamically loads book details on the right pane.</p>
+            </div>
+            <div class="card-footer" style="color: #fb923c;">
+                <span>Launch Lab 3B</span>
+                <span>&#8594;</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
