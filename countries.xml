@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<countries>
+  <country><name>India</name><capital>New Delhi</capital><continent>Asia</continent></country>
+  <country><name>United States</name><capital>Washington, D.C.</capital><continent>North America</continent></country>
+  <country><name>Japan</name><capital>Tokyo</capital><continent>Asia</continent></country>
+  <country><name>France</name><capital>Paris</capital><continent>Europe</continent></country>
+  <country><name>United Kingdom</name><capital>London</capital><continent>Europe</continent></country>
+</countries>
